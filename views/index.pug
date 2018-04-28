@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  body
+    div.row
+      div.col-sm-3
+      div.col-sm-6
+        h2.intro-h Upload Image onto Amazon S3 Bucket
+      div.col-sm-3
+
+    div.row
+      div.col-sm-3
+      div.col-sm-6
+        form(name="login", method="get", action="login")
+              div.form-group
+                  input.btn.btn-success.btn-md(type="submit", value="Get Going!")
+      div.col-sm-3
+
+
+
+
+
+    div.row
+        div.col-sm-3
+        div.col-sm-6
+            h4.project-h Uploaded Image served from S3 bucket
+            h5.project-p S3 Bucket Link : #{image_url}
+            h5.project-p Title : #{image_title}
+        div.col-sm-3
+    div.row
+        div.col-sm-3
+        div.col-sm-6
+            img(src=image_url, height="300" width="300" alt="Generic image placeholder")
+        div.col-sm-3

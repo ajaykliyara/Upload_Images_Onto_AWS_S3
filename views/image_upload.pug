@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  head
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+
+
+    div.col-sm-3
+    div.col-sm-3
+        h1= "Upload Image to AWS S3 Bucket"
+        form(name="upload-image-s3", method="post", action="/", enctype="multipart/form-data")
+          div.form-group
+              label(for="image_title",placeholder="Enter Image Name") Image Title
+              input.form-control#image_title(type="text", name="title")
+          div.form-group
+              label(for="s3_img",placeholder="Upload Image to S3") Image
+              input.form-control#s3_img(type="file", name="image")
+          div.actions
+              input.btn.btn-primary.btn-md(type="submit", value="Upload")
+    div.col-sm-6
