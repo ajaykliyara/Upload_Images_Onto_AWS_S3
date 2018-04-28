@@ -12,7 +12,7 @@ http://174.138.49.83:3000/
 1. Create an [S3 bucket](https://s3.console.aws.amazon.com/s3/home?region=us-east-1)
 2. Once created, go to Permissions/CORS Configuration tab, make entry
 
-      " <AllowedMethod>POST</AllowedMethod> "
+      \<AllowedMethod\>POST\</AllowedMethod\> 
 
    This sets the necessary permission for uploading a file from the Node application on to the S3 bucket.
 3. Create a [IAM User](https://console.aws.amazon.com/iam/home?region=us-east-1#/users) and make sure you attach the user a policy of 'AmazonS3FullAccess' and save the resulting Access key and Secret key.
