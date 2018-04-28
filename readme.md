@@ -6,7 +6,7 @@ Benefits are of this approach are many, couple being,
 2. A scalable service and these resources could be accessed by other applications as well.
 
 ### Simple App hosted on Digital Ocean
-
+http://174.138.49.83:3000/
 
 ### Setting up AWS
 1. Create an [S3 bucket](https://s3.console.aws.amazon.com/s3/home?region=us-east-1)
