@@ -11,7 +11,9 @@ Benefits are of this approach are many, couple being,
 ### Setting up AWS
 1. Create an [S3 bucket](https://s3.console.aws.amazon.com/s3/home?region=us-east-1)
 2. Once created, go to Permissions/CORS Configuration tab, make entry
-        ''' <AllowedMethod>POST</AllowedMethod> '''
+
+     <AllowedMethod>POST</AllowedMethod>
+
    This set the necessary permission for uploading a file from Node application on to the S3 bucket.
 3. Create a [IAM User](https://console.aws.amazon.com/iam/home?region=us-east-1#/users) and make sure you attach the user a policy of 'AmazonS3FullAccess' and save Access key and Secret key.
 
@@ -21,17 +23,17 @@ Benefits are of this approach are many, couple being,
 installed using 'npm install --save <package name>'
 2. Create a config file of format .json which hosts AWS credentials. Please make sure you add this file to .gitignore to avoid pushing it into public domain.
 
-'''
+```
 {
     "accessKeyId": "YOUR_ACCESS_KEY",
      "secretAccessKey": "YOUR_SECRET_KEY",
     "region": "us-east-1"
 }
 
-'''
+```
 3. Invoke multer which further using multer s3 to set storage.
 
-'''
+```
 const upload = multer({
     storage: multerS3({
         s3: s3,
@@ -45,7 +47,7 @@ const upload = multer({
     })
 });
 
-'''
+```
 
 4. Please refer to code/comments in the git repository for a sample application which
 accepts an image from the user and uploads to AWS S3 and goes head to display the same image.
